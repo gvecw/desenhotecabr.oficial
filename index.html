@@ -18,6 +18,7 @@
   </script>
 <style>
 :root{--laranja:#E8590C;--mostarda:#F2B705;--petroleo:#0B4F6C;--petroleo2:#1b1446;--creme:#F4E9D8;--preto:#141414;--verde:#2FBF71}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',sans-serif;background:linear-gradient(180deg,#1b1446 0%,#3a1a5c 45%,#7a2d5a 100%);background-attachment:fixed;color:var(--creme);overflow-x:hidden}
 .wrap{max-width:520px;margin:0 auto;padding:0 18px}
@@ -172,9 +173,49 @@ footer{background:transparent;text-align:center;padding:26px 18px;font-size:13px
 #planos .valor .moeda{font-size:20px;margin-top:8px}
 #planos .valor .inteiro{font-size:56px;letter-spacing:-1px}
 #planos .valor .cent{font-size:24px;margin-top:6px}
+.resumo{padding:50px 16px}
+.resumo-card{max-width:400px;margin:0 auto;background:#FFF6E5;color:#2a1a3a;border-radius:24px;padding:28px 22px;text-align:center;border:3px solid #F2B705;box-shadow:0 10px 0 rgba(0,0,0,.25),0 20px 50px rgba(0,0,0,.4)}
+.resumo-card h2{font-family:'Fredoka',sans-serif;font-size:26px;color:#2a1a3a;margin:8px 0 16px}
+.resumo-lista{list-style:none;padding:0;margin:0 0 18px;text-align:left}
+.resumo-lista li{padding:8px 0 8px 30px;position:relative;font-size:16px;border-bottom:1px solid rgba(42,26,58,.08)}
+.resumo-lista li:last-child{border-bottom:0}
+.resumo-lista li:before{content:"✓";position:absolute;left:2px;top:8px;width:20px;height:20px;border-radius:50%;background:#22c55e;color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.resumo-preco{font-size:16px;margin-bottom:12px}
+.resumo-preco b{display:block;font-family:'Fredoka',sans-serif;font-size:44px;color:#E8590C;line-height:1.1}
+.resumo-btn{display:block;background:#22c55e;color:#0b2a14;font-weight:800;font-size:18px;padding:18px;border-radius:16px;text-decoration:none;box-shadow:0 6px 0 rgba(0,0,0,.3);animation:pulsa 2s ease-in-out infinite}
+.resumo-btn:active{transform:translateY(4px);box-shadow:0 2px 0 rgba(0,0,0,.3)}
+@keyframes pulsa{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
+.resumo-obs{font-size:13px;opacity:.7;margin-top:10px}
+.topo{position:fixed;top:0;left:0;right:0;z-index:100;height:58px;display:flex;justify-content:space-between;align-items:center;padding:0 14px;background:rgba(27,20,70,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(244,233,216,.1);transition:transform .3s ease}
+.topo.escondida{transform:translateY(-100%)}
+body{padding-top:58px}
+.topo-menu{width:42px;height:42px;background:none;border:0;display:flex;flex-direction:column;justify-content:center;gap:6px;cursor:pointer}
+.topo-menu span{display:block;height:3px;width:26px;background:#F4E9D8;border-radius:3px}
+.topo-entrar{background:#F2B705;color:#1b1446;font-weight:800;font-size:15px;border:0;border-radius:999px;padding:9px 20px;cursor:pointer}
+.menu-lateral{position:fixed;top:0;left:0;bottom:0;width:78%;max-width:320px;z-index:120;background:#1b1446;padding:80px 22px 30px;display:flex;flex-direction:column;gap:6px;transform:translateX(-100%);transition:transform .3s}
+.menu-lateral.on{transform:none}
+.menu-lateral a{color:#F4E9D8;font-family:'Fredoka',sans-serif;font-size:20px;font-weight:600;text-decoration:none;padding:12px 4px;border-bottom:1px solid rgba(244,233,216,.08)}
+.menu-lateral .menu-cta{margin-top:16px;background:#22c55e;color:#0b2a14;text-align:center;border-radius:14px;border:0;font-weight:700}
+.menu-fundo{position:fixed;inset:0;z-index:110;background:rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:opacity .3s}
+.menu-fundo.on{opacity:1;pointer-events:auto}
 </style>
 </head>
 <body>
+
+<header class="topo">
+  <button class="topo-menu" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+  <button class="topo-entrar">Entrar</button>
+</header>
+<nav class="menu-lateral">
+  <a href="#acervo">O acervo</a>
+  <a href="#quem-comprou">Quem comprou</a>
+  <a href="#bonus">Bônus</a>
+  <a href="#planos">Planos</a>
+  <a href="#garantia">Garantia</a>
+  <a href="#duvidas">Dúvidas</a>
+  <a href="#planos" class="menu-cta">QUERO MEUS DESENHOS</a>
+</nav>
+<div class="menu-fundo"></div>
 
 <div class="stripes"></div>
 
@@ -199,7 +240,7 @@ footer{background:transparent;text-align:center;padding:26px 18px;font-size:13px
   </div>
 </header>
 
-<section>
+<section id="acervo">
   <div class="wrap">
     <span class="etiqueta">O ACERVO</span>
     <h2>RECONHECEU ALGUM?</h2>
@@ -224,7 +265,7 @@ footer{background:transparent;text-align:center;padding:26px 18px;font-size:13px
   </div>
 </section>
 
-<section class="feedbacks" id="feedbacks">
+<section class="feedbacks" id="quem-comprou">
   <div class="wrap">
     <span class="etiqueta">QUEM COMPROU</span>
     <h2>QUEM JÁ COMPROU</h2>
@@ -238,7 +279,7 @@ footer{background:transparent;text-align:center;padding:26px 18px;font-size:13px
   </div>
 </section>
 
-<section class="bonus">
+<section class="bonus" id="bonus">
   <div class="wrap">
     <span class="etiqueta">DE PRESENTE</span>
     <h2>🎁 BÔNUS DA COMPLETA</h2>
@@ -317,7 +358,7 @@ footer{background:transparent;text-align:center;padding:26px 18px;font-size:13px
 </div>
 </section>
 
-<section class="garantia">
+<section class="garantia" id="garantia">
   <div class="wrap">
     <div class="garantia-card">
       <img src="31.webp" alt="Garantia de 30 dias">
@@ -328,7 +369,7 @@ footer{background:transparent;text-align:center;padding:26px 18px;font-size:13px
   </div>
 </section>
 
-<section>
+<section id="duvidas">
   <div class="wrap">
     <span class="etiqueta">TIRE SUAS DÚVIDAS</span>
     <h2>DÚVIDAS</h2>
@@ -339,6 +380,24 @@ footer{background:transparent;text-align:center;padding:26px 18px;font-size:13px
     <details><summary>Dá pra baixar e assistir offline?</summary><p>Sim. Você pode assistir online ou baixar e ver sem internet.</p></details>
     <details><summary>Tem mensalidade?</summary><p>Não. Você paga uma vez só e o acesso é seu pra sempre.</p></details>
     <a href="#planos" class="btn" style="margin-top:18px">📺 QUERO ASSISTIR</a>
+  </div>
+</section>
+
+<section class="resumo">
+  <div class="resumo-card">
+    <span class="etiqueta">TUDO O QUE VOCÊ LEVA</span>
+    <h2>Sua infância inteira num lugar só</h2>
+    <ul class="resumo-lista">
+      <li>+2.500 desenhos dos anos 70, 80 e 90</li>
+      <li>Todos dublados</li>
+      <li>Celular, Smart TV e TV Box</li>
+      <li>Gibis, HQs e mangás de presente</li>
+      <li>Acesso na hora, no seu e-mail</li>
+      <li>Garantia de 30 dias</li>
+    </ul>
+    <div class="resumo-preco">a partir de <b>R$ 12,90</b></div>
+    <a href="#planos" class="resumo-btn">QUERO MEUS DESENHOS</a>
+    <p class="resumo-obs">Pagamento único. Assiste quando quiser.</p>
   </div>
 </section>
 
@@ -499,6 +558,37 @@ document.querySelectorAll('.fita .track, .bon-track').forEach(function(t){
   var velocidade = t.classList.contains('bon-track') ? 22 : 30;
   t.style.animationDuration = (t.scrollWidth / 2 / velocidade) + 's';
 });
+(function(){
+  var btnMenu = document.querySelector('.topo-menu');
+  var btnEntrar = document.querySelector('.topo-entrar');
+  var menu = document.querySelector('.menu-lateral');
+  var fundo = document.querySelector('.menu-fundo');
+  function fecharMenu(){
+    menu.classList.remove('on');
+    fundo.classList.remove('on');
+  }
+  btnMenu.addEventListener('click', function(){
+    menu.classList.toggle('on');
+    fundo.classList.toggle('on');
+  });
+  fundo.addEventListener('click', fecharMenu);
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', fecharMenu);
+  });
+  btnEntrar.addEventListener('click', abrirLogin);
+})();
+</script>
+<script>
+(function(){
+  var topo=document.querySelector('.topo'), ultimo=window.scrollY;
+  window.addEventListener('scroll',function(){
+    var y=window.scrollY;
+    if(document.querySelector('.menu-lateral.on')) return;
+    if(y>ultimo && y>80){ topo.classList.add('escondida'); }
+    else { topo.classList.remove('escondida'); }
+    ultimo=y;
+  },{passive:true});
+})();
 </script>
 </body>
 </html>
