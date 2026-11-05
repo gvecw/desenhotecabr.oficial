@@ -49,10 +49,7 @@ h1{font-family:'Fredoka',sans-serif;font-weight:700;font-size:25px;line-height:1
 .selos{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:14px;font-size:13px;opacity:.9}
 /* FITA DE CAPAS */
 .fita{background:transparent;padding:18px 0;overflow:hidden;border:0;mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%)}
-.fita .track{display:flex;gap:16px;width:max-content;animation:rola 70s linear infinite;will-change:transform}
-.fita:hover .track,.fita:active .track{animation-play-state:paused}
-.fita img{height:200px;width:auto;border-radius:14px;border:0;box-shadow:0 10px 25px rgba(0,0,0,.35)}
-@keyframes rola{to{transform:translateX(-50%)}}
+.fita img{height:200px;width:auto;border-radius:14px;border:0;box-shadow:0 10px 25px rgba(0,0,0,.35);margin-right:16px}
 section{padding:56px 0;background:transparent}
 .etiqueta{display:block;text-align:center;font-family:'Fredoka',sans-serif;font-size:14px;font-weight:600;letter-spacing:1px;color:#F2B705;margin-bottom:6px}
 h2{font-family:'Fredoka',sans-serif;font-weight:700;font-size:25px;line-height:1.2;text-align:center;color:var(--mostarda);margin-bottom:8px}
@@ -166,11 +163,11 @@ footer{background:transparent;text-align:center;padding:26px 18px;font-size:13px
 .modal-doc p{font-size:16px;line-height:1.6;color:#3a2a4a}
 .bon{min-width:0}
 .bon-car{width:100vw;margin-left:calc(50% - 50vw);overflow:hidden;padding:6px 0 10px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
-.bon-track{display:flex;gap:12px;width:max-content;animation:bonrola 40s linear infinite;will-change:transform}
-.bon-track img{height:180px;width:auto;border-radius:10px;box-shadow:0 6px 14px rgba(0,0,0,.3);flex-shrink:0}
-.bon-car:hover .bon-track,.bon-car:active .bon-track{animation-play-state:paused}
+.bon-track img{height:180px;width:auto;border-radius:10px;box-shadow:0 6px 14px rgba(0,0,0,.3);flex-shrink:0;margin-right:12px}
+@keyframes rolaInfinito{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.fita .track,.bon-track{display:flex;width:max-content;animation:rolaInfinito linear infinite;will-change:transform}
 .bon-track.reverso{animation-direction:reverse}
-@keyframes bonrola{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.fita:hover .track,.fita:active .track,.bon-car:hover .bon-track,.bon-car:active .bon-track{animation-play-state:paused}
 #planos .card .valor{font-family:'Fredoka',sans-serif;font-weight:700;white-space:nowrap;display:flex;justify-content:center;align-items:flex-start;gap:4px;line-height:1;margin:8px 0 4px}
 #planos .valor .moeda{font-size:20px;margin-top:8px}
 #planos .valor .inteiro{font-size:56px;letter-spacing:-1px}
@@ -192,9 +189,9 @@ footer{background:transparent;text-align:center;padding:26px 18px;font-size:13px
     <p class="sub">Pica-Pau, He-Man, Caverna do Dragão e centenas de outros, dublados, pra assistir no celular ou na sua TV.</p>
     <div class="vid-solo">
       <script src="https://fast.wistia.com/player.js" async></script>
-      <script src="https://fast.wistia.com/embed/0d0kxi78rw.js" async type="module"></script>
-      <style>wistia-player[media-id='0d0kxi78rw']:not(:defined){background:center / contain no-repeat url('https://fast.wistia.com/embed/medias/0d0kxi78rw/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style>
-      <wistia-player media-id="0d0kxi78rw" aspect="0.5625"></wistia-player>
+      <script src="https://fast.wistia.com/embed/nvqa13uvpk.js" async type="module"></script>
+      <style>wistia-player[media-id='nvqa13uvpk']:not(:defined){background:center / contain no-repeat url('https://fast.wistia.com/embed/medias/nvqa13uvpk/swatch');display:block;filter:blur(5px);padding-top:177.78%}</style>
+      <wistia-player media-id="nvqa13uvpk" aspect="0.5625"></wistia-player>
     </div>
     <p class="preco-hero">A partir de<b>R$ 12,90</b></p>
     <a href="#planos" class="btn">QUERO MEUS DESENHOS</a>
@@ -214,7 +211,6 @@ footer{background:transparent;text-align:center;padding:26px 18px;font-size:13px
     </div>
     <div class="fita" style="margin:0 -18px 18px"><div class="track">
       <img src="06.webp" alt="He-Man"><img src="07.webp" alt="Caverna do Dragão"><img src="01.webp" alt="Scooby-Doo"><img src="03.webp" alt="Tom e Jerry"><img src="04.webp" alt="Os Jetsons"><img src="08.webp" alt="Penelope Charmosa"><img src="02.webp" alt="Dragon Ball"><img src="09.webp" alt="Pica-Pau"><img src="10.jpg" alt="Speed Racer"><img src="12.jpg" alt="Inspetor Bugiganga"><img src="13.jpg" alt="Tartarugas Ninja"><img src="14.jpg" alt="Os Smurfs"><img src="16.jpg" alt="Looney Tunes">
-      <img src="06.webp" alt=""><img src="07.webp" alt=""><img src="01.webp" alt=""><img src="03.webp" alt=""><img src="04.webp" alt=""><img src="08.webp" alt=""><img src="02.webp" alt=""><img src="09.webp" alt=""><img src="10.jpg" alt=""><img src="12.jpg" alt=""><img src="13.jpg" alt=""><img src="14.jpg" alt=""><img src="16.jpg" alt="">
     </div></div>
     <div class="abas">
       <button class="aba on" onclick="filtrar('todos',this)">TODOS</button>
@@ -253,7 +249,6 @@ footer{background:transparent;text-align:center;padding:26px 18px;font-size:13px
         <div class="bon-car">
           <div class="bon-track">
             <img src="m1.webp" alt="" loading="lazy"><img src="m2.webp" alt="" loading="lazy"><img src="m3.webp" alt="" loading="lazy"><img src="m4.webp" alt="" loading="lazy"><img src="m5.webp" alt="" loading="lazy"><img src="m6.webp" alt="" loading="lazy">
-            <img src="m1.webp" alt="" loading="lazy"><img src="m2.webp" alt="" loading="lazy"><img src="m3.webp" alt="" loading="lazy"><img src="m4.webp" alt="" loading="lazy"><img src="m5.webp" alt="" loading="lazy"><img src="m6.webp" alt="" loading="lazy">
           </div>
         </div>
         <div><b>GIBIS DA TURMA DA MÔNICA</b><span>Mônica, Cebolinha, Magali, Chico Bento e os almanaques, do jeitinho que você lia quando era criança.</span></div>
@@ -264,7 +259,6 @@ footer{background:transparent;text-align:center;padding:26px 18px;font-size:13px
         <div class="bon-car">
           <div class="bon-track reverso">
             <img src="h1.webp" alt="" loading="lazy"><img src="h2.webp" alt="" loading="lazy"><img src="h3.webp" alt="" loading="lazy"><img src="h4.webp" alt="" loading="lazy"><img src="h5.webp" alt="" loading="lazy"><img src="h6.webp" alt="" loading="lazy">
-            <img src="h1.webp" alt="" loading="lazy"><img src="h2.webp" alt="" loading="lazy"><img src="h3.webp" alt="" loading="lazy"><img src="h4.webp" alt="" loading="lazy"><img src="h5.webp" alt="" loading="lazy"><img src="h6.webp" alt="" loading="lazy">
           </div>
         </div>
         <div><b>HQS CLÁSSICAS DE SUPER-HERÓIS</b><span>Homem-Aranha, Batman, Capitão América, Homem de Ferro e outros heróis nas histórias clássicas.</span></div>
@@ -274,7 +268,6 @@ footer{background:transparent;text-align:center;padding:26px 18px;font-size:13px
         <span class="bon-tag">BÔNUS 3</span>
         <div class="bon-car">
           <div class="bon-track">
-            <img src="g1.webp" alt="" loading="lazy"><img src="g2.webp" alt="" loading="lazy"><img src="g3.webp" alt="" loading="lazy"><img src="g4.webp" alt="" loading="lazy"><img src="g5.webp" alt="" loading="lazy"><img src="g6.webp" alt="" loading="lazy"><img src="g7.webp" alt="" loading="lazy">
             <img src="g1.webp" alt="" loading="lazy"><img src="g2.webp" alt="" loading="lazy"><img src="g3.webp" alt="" loading="lazy"><img src="g4.webp" alt="" loading="lazy"><img src="g5.webp" alt="" loading="lazy"><img src="g6.webp" alt="" loading="lazy"><img src="g7.webp" alt="" loading="lazy">
           </div>
         </div>
@@ -355,7 +348,7 @@ footer{background:transparent;text-align:center;padding:26px 18px;font-size:13px
 
   <div class="rodape-contato">
     <a href="https://wa.me/5562982591657" target="_blank">Suporte no WhatsApp</a>
-    <a href="mailto:SEU_EMAIL">SEU_EMAIL</a>
+    <a href="mailto:suporte.desenhotecaoficial2022@gmail.com">suporte.desenhotecaoficial2022@gmail.com</a>
   </div>
 
   <div class="rodape-seguro">
@@ -411,11 +404,11 @@ footer{background:transparent;text-align:center;padding:26px 18px;font-size:13px
 const docsTexto={
   termos:{
     titulo:'Termos de uso',
-    texto:'Produto digital com acesso vitalício a um acervo de desenhos em vídeo, liberado por e-mail após a confirmação do pagamento; acesso pessoal e intransferível; garantia de 30 dias com reembolso integral pelo suporte.'
+    texto:'Produto digital com acesso vitalício a um acervo de desenhos em vídeo, liberado por e-mail após a confirmação do pagamento; acesso pessoal e intransferível; garantia de 30 dias com reembolso integral pelo suporte, pelo e-mail suporte.desenhotecaoficial2022@gmail.com ou pelo WhatsApp.'
   },
   privacidade:{
     titulo:'Política de privacidade',
-    texto:'Coletamos apenas nome, e-mail e telefone informados na compra, usados somente para liberar o acesso e prestar suporte; não vendemos nem compartilhamos dados com terceiros; para excluir seus dados, é só pedir pelo suporte.'
+    texto:'Coletamos apenas nome, e-mail e telefone informados na compra, usados somente para liberar o acesso e prestar suporte; não vendemos nem compartilhamos dados com terceiros; para excluir seus dados, é só pedir pelo suporte, pelo e-mail suporte.desenhotecaoficial2022@gmail.com ou pelo WhatsApp.'
   }
 };
 function abrirDoc(tipo){
@@ -497,6 +490,15 @@ document.querySelectorAll('a[href="#planos"]').forEach(a=>a.addEventListener('cl
   },{threshold:0.6});
   document.querySelectorAll('.roll').forEach(el=>obs.observe(el));
 })();
+</script>
+<script>
+document.querySelectorAll('.fita .track, .bon-track').forEach(function(t){
+  var base = t.innerHTML, largura = Math.max(window.innerWidth, 1920);
+  while (t.scrollWidth < largura) { t.innerHTML += base; }
+  t.innerHTML = t.innerHTML + t.innerHTML;
+  var velocidade = t.classList.contains('bon-track') ? 22 : 30;
+  t.style.animationDuration = (t.scrollWidth / 2 / velocidade) + 's';
+});
 </script>
 </body>
 </html>
