@@ -149,7 +149,7 @@ footer{background:transparent;text-align:center;padding:26px 18px;font-size:13px
 .contador div{flex:1;background:rgba(255,255,255,.08);border-radius:14px;padding:12px 6px;text-align:center}
 .contador b{display:block;font-family:'Fredoka',sans-serif;font-weight:700;font-size:26px;color:#F2B705;font-variant-numeric:tabular-nums}
 .contador small{font-size:13px;color:#F4E9D8;opacity:.85}
-.rodape{background:rgba(0,0,0,.35);padding:40px 20px 30px;text-align:center;color:#F4E9D8;font-size:13px;margin-top:40px}
+.rodape{background:rgba(0,0,0,.35);padding:40px 20px 30px;text-align:center;color:#F4E9D8;font-size:13px;margin-top:40px;opacity:1}
 .rodape-marca{font-family:'Fredoka',sans-serif;font-weight:700;font-size:20px;color:#F2B705;margin-bottom:6px}
 .rodape-frase{font-size:16px;line-height:1.6;color:#F4E9D8;margin-bottom:18px}
 .rodape-contato{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
@@ -173,19 +173,6 @@ footer{background:transparent;text-align:center;padding:26px 18px;font-size:13px
 #planos .valor .moeda{font-size:20px;margin-top:8px}
 #planos .valor .inteiro{font-size:56px;letter-spacing:-1px}
 #planos .valor .cent{font-size:24px;margin-top:6px}
-.resumo{padding:50px 16px}
-.resumo-card{max-width:400px;margin:0 auto;background:#FFF6E5;color:#2a1a3a;border-radius:24px;padding:28px 22px;text-align:center;border:3px solid #F2B705;box-shadow:0 10px 0 rgba(0,0,0,.25),0 20px 50px rgba(0,0,0,.4)}
-.resumo-card h2{font-family:'Fredoka',sans-serif;font-size:26px;color:#2a1a3a;margin:8px 0 16px}
-.resumo-lista{list-style:none;padding:0;margin:0 0 18px;text-align:left}
-.resumo-lista li{padding:8px 0 8px 30px;position:relative;font-size:16px;border-bottom:1px solid rgba(42,26,58,.08)}
-.resumo-lista li:last-child{border-bottom:0}
-.resumo-lista li:before{content:"✓";position:absolute;left:2px;top:8px;width:20px;height:20px;border-radius:50%;background:#22c55e;color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
-.resumo-preco{font-size:16px;margin-bottom:12px}
-.resumo-preco b{display:block;font-family:'Fredoka',sans-serif;font-size:44px;color:#E8590C;line-height:1.1}
-.resumo-btn{display:block;background:#22c55e;color:#0b2a14;font-weight:800;font-size:18px;padding:18px;border-radius:16px;text-decoration:none;box-shadow:0 6px 0 rgba(0,0,0,.3);animation:pulsa 2s ease-in-out infinite}
-.resumo-btn:active{transform:translateY(4px);box-shadow:0 2px 0 rgba(0,0,0,.3)}
-@keyframes pulsa{0%,100%{transform:scale(1)}50%{transform:scale(1.03)}}
-.resumo-obs{font-size:13px;opacity:.7;margin-top:10px}
 .topo{position:fixed;top:0;left:0;right:0;z-index:100;height:58px;display:flex;justify-content:space-between;align-items:center;padding:0 14px;background:rgba(27,20,70,.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(244,233,216,.1);transition:transform .3s ease}
 .topo.escondida{transform:translateY(-100%)}
 body{padding-top:58px}
@@ -251,7 +238,7 @@ body{padding-top:58px}
       <div><b><span class="roll" data-n="100">0</span>%</b><small>dublados</small></div>
     </div>
     <div class="fita" style="margin:0 -18px 18px"><div class="track">
-      <img src="06.webp" alt="He-Man"><img src="07.webp" alt="Caverna do Dragão"><img src="01.webp" alt="Scooby-Doo"><img src="03.webp" alt="Tom e Jerry"><img src="04.webp" alt="Os Jetsons"><img src="08.webp" alt="Penelope Charmosa"><img src="02.webp" alt="Dragon Ball"><img src="09.webp" alt="Pica-Pau"><img src="10.jpg" alt="Speed Racer"><img src="12.jpg" alt="Inspetor Bugiganga"><img src="13.jpg" alt="Tartarugas Ninja"><img src="14.jpg" alt="Os Smurfs"><img src="16.jpg" alt="Looney Tunes">
+      <img src="06.webp" alt="He-Man" loading="eager" decoding="async"><img src="07.webp" alt="Caverna do Dragão" loading="eager" decoding="async"><img src="01.webp" alt="Scooby-Doo" loading="eager" decoding="async"><img src="03.webp" alt="Tom e Jerry" loading="eager" decoding="async"><img src="04.webp" alt="Os Jetsons" loading="eager" decoding="async"><img src="08.webp" alt="Penelope Charmosa" loading="eager" decoding="async"><img src="02.webp" alt="Dragon Ball" loading="eager" decoding="async"><img src="09.webp" alt="Pica-Pau" loading="eager" decoding="async"><img src="10.jpg" alt="Speed Racer" loading="eager" decoding="async"><img src="12.jpg" alt="Inspetor Bugiganga" loading="eager" decoding="async"><img src="13.jpg" alt="Tartarugas Ninja" loading="eager" decoding="async"><img src="14.jpg" alt="Os Smurfs" loading="eager" decoding="async"><img src="16.jpg" alt="Looney Tunes" loading="eager" decoding="async">
     </div></div>
     <div class="abas">
       <button class="aba on" onclick="filtrar('todos',this)">TODOS</button>
@@ -259,7 +246,7 @@ body{padding-top:58px}
       <button class="aba" onclick="filtrar('80',this)">ANOS 80</button>
       <button class="aba" onclick="filtrar('90',this)">ANOS 90</button>
     </div>
-    <div class="lista" id="lista"><span data-d="80">He-Man</span><span data-d="90">Dragon Ball Z</span><span data-d="70">Pica-Pau</span><span data-d="80">Thundercats</span><span data-d="90">Dragon Ball</span><span data-d="70">Pernalonga</span><span data-d="80">Caverna do Dragão</span><span data-d="90">Cavaleiros do Zodíaco</span><span data-d="70">Tom &amp; Jerry</span><span data-d="80">Transformers</span><span data-d="90">X-Men</span><span data-d="70">Scooby-Doo</span><span data-d="80">She-Ra</span><span data-d="90">Tartarugas Ninja</span><span data-d="70">Os Flintstones</span><span data-d="80">G.I. Joe Comandos em Ação</span><span data-d="90">Sailor Moon</span><span data-d="70">Os Jetsons</span><span data-d="80">Os Smurfs</span><span data-d="90">Laboratório de Dexter</span><span data-d="70">Mickey Mouse</span><span data-d="80">Ursinhos Carinhosos</span><span data-d="90">Batman</span><span data-d="70">Popeye</span><span data-d="80">Luluzinha</span><span data-d="90">DuckTales Os Caçadores de Aventuras</span><span data-d="70">Charlie Brown</span><span data-d="80">Alvin e os Esquilos</span><span data-d="90">Animaniacs</span><span data-d="70">Corrida Maluca</span><span data-d="80">Voltron</span><span data-d="90">Homem-Aranha</span><span data-d="70">Pato Donald</span><span data-d="80">Jem e as Hologramas</span><span data-d="90">Pinky e o Cérebro</span><span data-d="70">Astro Boy</span><span data-d="80">M.A.S.K.</span><span data-d="90">Hey Arnold!</span><span data-d="70">Penelope Charmosa</span><span data-d="80">Inspetor Bugiganga</span><span data-d="90">Gargoyles Os Gárgulas</span><span data-d="70">A Pantera Cor-de-Rosa</span><span data-d="80">Snorks</span><span data-d="90">Tico e Teco</span><span data-d="70">Manda-Chuva</span><span data-d="80">Denver, o Último Dinossauro</span><span data-d="90">Capitão Planeta</span><span data-d="70">Zé Colmeia</span><span data-d="80">Ursinho Pooh</span><span data-d="90">Rugrats Os Anjinhos</span><span data-d="70">Speed Racer</span><span data-d="80">Visionaries</span><span data-d="90">Darkwing Duck</span><span data-d="70">Ovelha Negra e o Lobo Mau</span><span data-d="80">David, o Gnomo</span><span data-d="90">Garfield</span><span data-d="70">Superamigos</span><span data-d="80">Ulisses 31</span><span data-d="90">Doug Funnie</span><span data-d="70">Tutubarão</span><span data-d="80">Bravestarr</span><span data-d="90">Superman</span><span data-d="80">Cavalo de Fogo</span><span data-d="90">Pokémon</span><span data-d="80">Os Caça-Fantasmas</span><span data-d="90">Os Simpsons</span><span data-d="80">Falcões de Prata</span><span data-d="90">Yu Yu Hakusho</span><span data-d="80">Turma da Mônica</span><span data-d="90">Tiny Toons</span><span data-d="90">A Vaca e o Frango</span><span data-d="90">Eu Sou a Doninha</span><span data-d="90">CatDog</span><span data-d="90">Recreio</span><span data-d="90">Arthur</span><span data-d="90">Hamtaro</span><span data-d="90">Sonic the Hedgehog</span><span data-d="90">Super Mario Bros.</span><span data-d="90">ReBoot</span><span data-d="90">Freakazoid</span><span data-d="90">Slam Dunk</span><span data-d="90">Cybersix</span><span data-d="90">A Turma do Pateta</span><span data-d="90">Timão e Pumba</span><span data-d="90">Aladdin A Série</span><span data-d="90">Hércules A Série</span><span data-d="90">O Máskara</span><span data-d="90">O Fantástico Mundo de Bobby</span><span data-d="90">Super Campeões</span><span data-d="90">Fly O Pequeno Guerreiro</span><span data-d="90">Guerreiras Mágicas de Rayearth</span></div>
+    <div class="lista" id="lista"><span data-d="80">He-Man</span><span data-d="90">Dragon Ball Z</span><span data-d="70">Pica-Pau</span><span data-d="80">Thundercats</span><span data-d="90">Dragon Ball</span><span data-d="70">Pernalonga</span><span data-d="80">Caverna do Dragão</span><span data-d="90">Cavaleiros do Zodíaco</span><span data-d="70">Tom &amp; Jerry</span><span data-d="80">Transformers</span><span data-d="90">X-Men</span><span data-d="70">Scooby-Doo</span><span data-d="80">She-Ra</span><span data-d="90">Tartarugas Ninja</span><span data-d="70">Os Flintstones</span><span data-d="80">G.I. Joe Comandos em Ação</span><span data-d="90">Sailor Moon</span><span data-d="70">Os Jetsons</span><span data-d="80">Os Smurfs</span><span data-d="90">Laboratório de Dexter</span><span data-d="70">Mickey Mouse</span><span data-d="80">Ursinhos Carinhosos</span><span data-d="90">Batman</span><span data-d="70">Popeye</span><span data-d="80">Luluzinha</span><span data-d="90">DuckTales Os Caçadores de Aventuras</span><span data-d="70">Charlie Brown</span><span data-d="80">Alvin e os Esquilos</span><span data-d="90">Animaniacs</span><span data-d="70">Corrida Maluca</span><span data-d="80">Voltron</span><span data-d="90">Homem-Aranha</span><span data-d="70">Pato Donald</span><span data-d="80">Jem e as Hologramas</span><span data-d="90">Pinky e o Cérebro</span><span data-d="70">Astro Boy</span><span data-d="80">M.A.S.K.</span><span data-d="90">Hey Arnold!</span><span data-d="70">Penelope Charmosa</span><span data-d="80">Inspetor Bugiganga</span><span data-d="90">Gargoyles Os Gárgulas</span><span data-d="70">A Pantera Cor-de-Rosa</span><span data-d="80">Snorks</span><span data-d="90">Tico e Teco</span><span data-d="70">Manda-Chuva</span><span data-d="80">Denver, o Último Dinossauro</span><span data-d="90">Capitão Planeta</span><span data-d="70">Zé Colmeia</span><span data-d="80">Ursinho Pooh</span><span data-d="90">Rugrats Os Anjinhos</span><span data-d="70">Speed Racer</span><span data-d="80">Visionaries</span><span data-d="90">Darkwing Duck</span><span data-d="70">Ovelha Negra e o Lobo Mau</span><span data-d="80">David, o Gnomo</span><span data-d="90">Garfield</span><span data-d="70">Superamigos</span><span data-d="80">Ulisses 31</span><span data-d="90">Doug Funnie</span><span data-d="70">Tutubarão</span><span data-d="80">Bravestarr</span><span data-d="90">Superman</span><span data-d="80">Cavalo de Fogo</span><span data-d="90">Pokémon</span><span data-d="80">Os Caça-Fantasmas</span><span data-d="90">Os Simpsons</span><span data-d="80">Falcões de Prata</span><span data-d="90">Yu Yu Hakusho</span><span data-d="80">Turma da Mônica</span><span data-d="90">Tiny Toons</span><span data-d="90">A Vaca e o Frango</span><span data-d="90">Eu Sou a Doninha</span><span data-d="90">CatDog</span><span data-d="90">Recreio</span><span data-d="90">Arthur</span><span data-d="90">Hamtaro</span><span data-d="90">Sonic the Hedgehog</span><span data-d="90">Super Mario Bros.</span><span data-d="90">ReBoot</span><span data-d="90">Freakazoid</span><span data-d="90">Slam Dunk</span><span data-d="90">Cybersix</span><span data-d="90">A Turma do Pateta</span><span data-d="90">Timão e Pumba</span><span data-d="90">Aladdin A Série</span><span data-d="90">Hércules A Série</span><span data-d="90">O Máskara</span><span data-d="90">O Fantástico Mundo de Bobby</span><span data-d="90">Super Campeões</span><span data-d="90">Fly O Pequeno Guerreiro</span><span data-d="90">Guerreiras Mágicas de Rayearth</span><span data-d="70">A Formiga Atômica</span><span data-d="70">A Formiga e o Tamanduá</span><span data-d="70">Capitão Caverna</span><span data-d="70">Ligeirinho</span><span data-d="70">Papa-Léguas</span><span data-d="70">A Família Addams</span><span data-d="70">Aquaman</span><span data-d="70">Batman e Robin</span></div>
     <div style="text-align:center;margin-top:14px"><button class="aba" id="btnVerTodos" onclick="toggleVerTodos()">Ver Todos</button></div>
     <p class="mais">+ CENTENAS DE OUTROS NO AR</p>
   </div>
@@ -289,7 +276,7 @@ body{padding-top:58px}
         <span class="bon-tag">BÔNUS 1</span>
         <div class="bon-car">
           <div class="bon-track">
-            <img src="m1.webp" alt="" loading="lazy"><img src="m2.webp" alt="" loading="lazy"><img src="m3.webp" alt="" loading="lazy"><img src="m4.webp" alt="" loading="lazy"><img src="m5.webp" alt="" loading="lazy"><img src="m6.webp" alt="" loading="lazy">
+            <img src="m1.webp" alt="" loading="eager" decoding="async"><img src="m2.webp" alt="" loading="eager" decoding="async"><img src="m3.webp" alt="" loading="eager" decoding="async"><img src="m4.webp" alt="" loading="eager" decoding="async"><img src="m5.webp" alt="" loading="eager" decoding="async"><img src="m6.webp" alt="" loading="eager" decoding="async">
           </div>
         </div>
         <div><b>GIBIS DA TURMA DA MÔNICA</b><span>Mônica, Cebolinha, Magali, Chico Bento e os almanaques, do jeitinho que você lia quando era criança.</span></div>
@@ -299,7 +286,7 @@ body{padding-top:58px}
         <span class="bon-tag">BÔNUS 2</span>
         <div class="bon-car">
           <div class="bon-track reverso">
-            <img src="h1.webp" alt="" loading="lazy"><img src="h2.webp" alt="" loading="lazy"><img src="h3.webp" alt="" loading="lazy"><img src="h4.webp" alt="" loading="lazy"><img src="h5.webp" alt="" loading="lazy"><img src="h6.webp" alt="" loading="lazy">
+            <img src="h1.webp" alt="" loading="eager" decoding="async"><img src="h2.webp" alt="" loading="eager" decoding="async"><img src="h3.webp" alt="" loading="eager" decoding="async"><img src="h4.webp" alt="" loading="eager" decoding="async"><img src="h5.webp" alt="" loading="eager" decoding="async"><img src="h6.webp" alt="" loading="eager" decoding="async">
           </div>
         </div>
         <div><b>HQS CLÁSSICAS DE SUPER-HERÓIS</b><span>Homem-Aranha, Batman, Capitão América, Homem de Ferro e outros heróis nas histórias clássicas.</span></div>
@@ -309,7 +296,7 @@ body{padding-top:58px}
         <span class="bon-tag">BÔNUS 3</span>
         <div class="bon-car">
           <div class="bon-track">
-            <img src="g1.webp" alt="" loading="lazy"><img src="g2.webp" alt="" loading="lazy"><img src="g3.webp" alt="" loading="lazy"><img src="g4.webp" alt="" loading="lazy"><img src="g5.webp" alt="" loading="lazy"><img src="g6.webp" alt="" loading="lazy"><img src="g7.webp" alt="" loading="lazy">
+            <img src="g1.webp" alt="" loading="eager" decoding="async"><img src="g2.webp" alt="" loading="eager" decoding="async"><img src="g3.webp" alt="" loading="eager" decoding="async"><img src="g4.webp" alt="" loading="eager" decoding="async"><img src="g5.webp" alt="" loading="eager" decoding="async"><img src="g6.webp" alt="" loading="eager" decoding="async"><img src="g7.webp" alt="" loading="eager" decoding="async">
           </div>
         </div>
         <div><b>MANGÁS DOS ANOS 90</b><span>Dragon Ball, Yu Yu Hakusho, Naruto, Yu-Gi-Oh! e Hunter x Hunter pra ler no celular.</span></div>
@@ -379,29 +366,12 @@ body{padding-top:58px}
     <details><summary>Os desenhos são dublados?</summary><p>Sim. Todos são dublados em português, organizados por nome e temporada.</p></details>
     <details><summary>Dá pra baixar e assistir offline?</summary><p>Sim. Você pode assistir online ou baixar e ver sem internet.</p></details>
     <details><summary>Tem mensalidade?</summary><p>Não. Você paga uma vez só e o acesso é seu pra sempre.</p></details>
-    <a href="#planos" class="btn" style="margin-top:18px">📺 QUERO ASSISTIR</a>
-  </div>
-</section>
-
-<section class="resumo">
-  <div class="resumo-card">
-    <span class="etiqueta">TUDO O QUE VOCÊ LEVA</span>
-    <h2>Sua infância inteira num lugar só</h2>
-    <ul class="resumo-lista">
-      <li>+2.500 desenhos dos anos 70, 80 e 90</li>
-      <li>Todos dublados</li>
-      <li>Celular, Smart TV e TV Box</li>
-      <li>Gibis, HQs e mangás de presente</li>
-      <li>Acesso na hora, no seu e-mail</li>
-      <li>Garantia de 30 dias</li>
-    </ul>
-    <div class="resumo-preco">a partir de <b>R$ 12,90</b></div>
-    <a href="#planos" class="resumo-btn">QUERO MEUS DESENHOS</a>
-    <p class="resumo-obs">Pagamento único. Assiste quando quiser.</p>
+    <a href="#planos" class="btn" style="margin-top:18px">QUERO ASSISTIR</a>
   </div>
 </section>
 
 <footer class="rodape">
+  <img src="logo_perfil.webp" alt="Desenhoteca" style="width:110px;height:110px;border-radius:50%;object-fit:contain;display:block;margin:0 auto 12px;box-shadow:0 6px 18px rgba(0,0,0,.35);opacity:1">
   <div class="rodape-marca">DESENHOTECA</div>
   <p class="rodape-frase">Os clássicos da TV, guardados com carinho.</p>
 
@@ -552,6 +522,10 @@ document.querySelectorAll('a[href="#planos"]').forEach(a=>a.addEventListener('cl
 </script>
 <script>
 document.querySelectorAll('.fita .track, .bon-track').forEach(function(t){
+  t.querySelectorAll('img').forEach(function(img){
+    img.setAttribute('loading', 'eager');
+    img.setAttribute('decoding', 'async');
+  });
   var base = t.innerHTML, largura = Math.max(window.innerWidth, 1920);
   while (t.scrollWidth < largura) { t.innerHTML += base; }
   t.innerHTML = t.innerHTML + t.innerHTML;
